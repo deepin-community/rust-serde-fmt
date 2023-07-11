@@ -1,5 +1,19 @@
-template-repository (1.0-1) unstable; urgency=medium
+rust-serde-fmt (1.0.1-2) unstable; urgency=medium
 
-  * Initial release
+  * tighten autopkgtests
+  * stop superfluously provide virtual unversioned feature package
+  * merge virtual feature package into main binary package
+  * change binary library package to be arch-independent
+  * declare compliance with Debian Policy 4.6.2
+  * update dh-cargo fork;
+    build-depend on libstring-shellquote-perl
+  * update copyright info: update coverage
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Jonas Smedegaard <dr@jones.dk>  Fri, 03 Feb 2023 08:11:13 +0100
+
+rust-serde-fmt (1.0.1-1) unstable; urgency=low
+
+  * initial Release;
+    closes: Bug#1020774
+
+ -- Jonas Smedegaard <dr@jones.dk>  Mon, 26 Sep 2022 16:40:27 +0200

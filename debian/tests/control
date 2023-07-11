@@ -1,0 +1,35 @@
+Test-Command: /usr/share/cargo/bin/cargo-auto-test serde_fmt 1.0.1
+ --all-targets --all-features
+Features: test-name=rust-serde-fmt-1:@
+Depends:
+ dh-cargo,
+ librust-serde-derive-1+default-dev,
+ librust-serde-fmt-1-dev,
+Restrictions: allow-stderr
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test serde_fmt 1.0.1
+ --all-targets
+Features: test-name=rust-serde-fmt-1:default
+Depends:
+ dh-cargo,
+ librust-serde-derive-1+default-dev,
+ librust-serde-fmt-1+default-dev,
+Restrictions: allow-stderr
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test serde_fmt 1.0.1
+ --all-targets --no-default-features
+Features: test-name=rust-serde-fmt-1:
+Depends:
+ dh-cargo,
+ librust-serde-derive-1+default-dev,
+ librust-serde-fmt-1-dev,
+Restrictions: allow-stderr
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test serde_fmt 1.0.1
+ --all-targets --no-default-features --features std
+Features: test-name=rust-serde-fmt-1:std
+Depends:
+ dh-cargo,
+ librust-serde-derive-1+default-dev,
+ librust-serde-fmt-1+std-dev,
+Restrictions: allow-stderr
